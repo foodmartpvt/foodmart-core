@@ -147,7 +147,7 @@
                             </li>
                         </ul>
                     </div>
-                    @if (\App\BusinessSetting::where('type', 'vendor_system_activation')->first()->value == 1)
+                   {{-- @if (\App\BusinessSetting::where('type', 'vendor_system_activation')->first()->value == 1)
                         <div class="col text-center text-md-left">
                             <div class="mt-4">
                                 <h4 class="heading heading-xs strong-600 text-uppercase mb-2">
@@ -158,7 +158,7 @@
                                 </a>
                             </div>
                         </div>
-                    @endif
+                    @endif--}}
                 </div>
             </div>
         </div>
