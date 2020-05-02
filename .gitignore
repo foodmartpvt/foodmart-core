@@ -1,0 +1,9 @@
+.env.*.php
+.env.php
+/vendor
+/.idea
+/.vscode
+/.vagrant
+.DS_Store
+.idea/
+
