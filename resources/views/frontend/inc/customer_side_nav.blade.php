@@ -127,10 +127,10 @@
                 </li>
             </ul>
         </div>
-        @if (\App\BusinessSetting::where('type', 'vendor_system_activation')->first()->value == 1)
+      {{--  @if (\App\BusinessSetting::where('type', 'vendor_system_activation')->first()->value == 1)
             <div class="widget-seller-btn pt-4">
                 <a href="{{ route('shops.create') }}" class="btn btn-anim-primary w-100">{{__('Be A Seller')}}</a>
             </div>
-        @endif
+        @endif--}}
     </div>
 </div>
