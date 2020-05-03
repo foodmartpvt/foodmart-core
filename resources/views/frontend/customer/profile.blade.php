@@ -137,7 +137,7 @@
                                             <label>{{__('Postal Code')}}</label>
                                         </div>
                                         <div class="col-md-10">
-                                            <input type="text" class="form-control mb-3" placeholder="Your Postal Code" name="postal_code" value="{{ Auth::user()->postal_code }}">
+                                            <input type="text" class="form-control mb-3" placeholder="Your Postal Code" name="postal_code" value="{{ Auth::user()->postal_code }}" readonly="readonly">
                                         </div>
                                     </div>
                                     <div class="row">
