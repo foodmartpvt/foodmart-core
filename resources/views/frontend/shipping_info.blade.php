@@ -110,7 +110,7 @@
                                                 <div class="form-group has-feedback">
                                                     <label class="control-label">{{__('City')}}</label>
 {{--                                                    <input type="text" class="form-control" value="{{ $user->city }}" name="city" required>--}}
-                                                    <select class="form-control selectpicker" data-live-search="true" name="country">
+                                                    <select class="form-control selectpicker" data-live-search="true" name="city">
                                                         @foreach (\App\Cities::all() as $key => $city)
                                                             <option value="{{ $city->city_name }}" @if ($city->city_name == $user->city) selected @endif>{{ $city->city_name }}</option>
                                                         @endforeach
