@@ -110,7 +110,7 @@
                                         <div class="col-md-10">
                                             <div class="mb-3">
                                                 <select class="form-control mb-3 selectpicker" data-placeholder="Select your country" name="country">
-                                                    @foreach (\App\Country::all() as $key => $country)
+                                                    @foreach (\App\Country::where('code',"LK")->get() as $key => $country)
                                                         <option value="{{ $country->code }}" <?php if(Auth::user()->country == $country->code) echo "selected";?> >{{ $country->name }}</option>
                                                     @endforeach
                                                 </select>
@@ -122,7 +122,14 @@
                                             <label>{{__('City')}}</label>
                                         </div>
                                         <div class="col-md-10">
-                                            <input type="text" class="form-control mb-3" placeholder="Your City" name="city" value="{{ Auth::user()->city }}">
+                                            <div class="mb-3">
+                                                <select class="form-control mb-3 selectpicker" data-placeholder="Select your country" name="city">
+                                                    @foreach (\App\Cities::all() as $key => $city)
+                                                        <option value="{{ $city->city_name }}" <?php if(Auth::user()->city == $city->city_name) echo "selected";?> >{{  $city->city_name }}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+{{--                                            <input type="text" class="form-control mb-3" placeholder="Your City" name="city" value="{{ Auth::user()->city }}">--}}
                                         </div>
                                     </div>
                                     <div class="row">

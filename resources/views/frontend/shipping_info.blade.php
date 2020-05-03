@@ -91,13 +91,16 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label">{{__('Select your country')}}</label>
                                                     <select class="form-control selectpicker" data-live-search="true" name="country">
-                                                        @foreach (\App\Country::all() as $key => $country)
+                                                       {{-- @foreach (\App\Country::all() as $key => $country)
+                                                            <option value="{{ $country->name }}" @if ($country->code == $user->country) selected @endif>{{ $country->name }}</option>
+                                                        @endforeach--}}
+
+                                                        @foreach (\App\Country::where('code',"LK")->get() as $key => $country)
                                                             <option value="{{ $country->name }}" @if ($country->code == $user->country) selected @endif>{{ $country->name }}</option>
                                                         @endforeach
                                                     </select>
@@ -106,7 +109,12 @@
                                             <div class="col-md-6">
                                                 <div class="form-group has-feedback">
                                                     <label class="control-label">{{__('City')}}</label>
-                                                    <input type="text" class="form-control" value="{{ $user->city }}" name="city" required>
+{{--                                                    <input type="text" class="form-control" value="{{ $user->city }}" name="city" required>--}}
+                                                    <select class="form-control selectpicker" data-live-search="true" name="country">
+                                                        @foreach (\App\Cities::all() as $key => $city)
+                                                            <option value="{{ $city->city_name }}" @if ($city->city_name == $user->city) selected @endif>{{ $city->city_name }}</option>
+                                                        @endforeach
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -162,16 +170,24 @@
                                                 <div class="form-group">
                                                     <label class="control-label">{{__('Select your country')}}</label>
                                                     <select class="form-control custome-control" data-live-search="true" name="country">
-                                                        @foreach (\App\Country::all() as $key => $country)
+                                                        @foreach (\App\Country::where('code',"LK")->get() as $key => $country)
                                                             <option value="{{ $country->name }}">{{ $country->name }}</option>
                                                         @endforeach
+                                                        {{--@foreach (\App\Country::all() as $key => $country)
+                                                            <option value="{{ $country->name }}">{{ $country->name }}</option>
+                                                        @endforeach--}}
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group has-feedback">
                                                     <label class="control-label">{{__('City')}}</label>
-                                                    <input type="text" class="form-control" placeholder="{{__('City')}}" name="city" required>
+{{--                                                    <input type="text" class="form-control" placeholder="{{__('City')}}" name="city" required>--}}
+                                                    <select class="form-control custome-control" data-live-search="true" name="city">
+                                                        @foreach (\App\Cities::all() as $key => $city)
+                                                            <option value="{{ $city->city_name }}">{{ $city->city_name }}</option>
+                                                        @endforeach
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
