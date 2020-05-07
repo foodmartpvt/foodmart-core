@@ -1,5 +1,6 @@
 @extends('frontend.layouts.app')
 
+
 @section('content')
 
 <div class="all-category-wrap py-4 gry-bg">
