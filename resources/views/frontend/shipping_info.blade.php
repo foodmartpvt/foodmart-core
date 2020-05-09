@@ -16,7 +16,7 @@
                             </div>
                         </div>
                     </div>
-
+{{----}}
                     <div class="col-3">
                         <div class="icon-block icon-block--style-1-v5 text-center active">
                             <div class="block-icon mb-0">
