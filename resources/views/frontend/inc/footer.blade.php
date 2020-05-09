@@ -173,11 +173,14 @@
                             <li>
                                 © {{ date('Y') }} {{ $generalsetting->site_name }}
                             </li>
+{{--                            <li>--}}
+{{--                                <a href="{{ route('terms') }}">{{__('Terms')}}</a>--}}
+{{--                            </li>--}}
+{{--                            <li>--}}
+{{--                                <a href="{{ route('privacypolicy') }}">{{__('Privacy policy')}}</a>--}}
+{{--                            </li>--}}
                             <li>
-                                <a href="{{ route('terms') }}">{{__('Terms')}}</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('privacypolicy') }}">{{__('Privacy policy')}}</a>
+                                <a href="https://www.facebook.com/pasinduch" target="_blank">{{__('Designed by Pasindu Chanaka')}}</a>
                             </li>
                         </ul>
                     </div>

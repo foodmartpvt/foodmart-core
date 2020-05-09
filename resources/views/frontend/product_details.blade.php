@@ -354,18 +354,18 @@
                                 </div>
                                 <div class="col-10">
                                     <ul class="inline-links">
-                                        <li>
-                                            <img src="{{ asset('frontend/images/placeholder.jpg') }}" src="{{ asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset('frontend/images/icons/cards/visa.png') }}" width="30" class="lazyload">
-                                        </li>
-                                        <li>
-                                            <img src="{{ asset('frontend/images/placeholder.jpg') }}" src="{{ asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset('frontend/images/icons/cards/mastercard.png') }}" width="30" class="lazyload">
-                                        </li>
-                                        <li>
-                                            <img src="{{ asset('frontend/images/placeholder.jpg') }}" src="{{ asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset('frontend/images/icons/cards/maestro.png') }}" width="30" class="lazyload">
-                                        </li>
-                                        <li>
-                                            <img src="{{ asset('frontend/images/placeholder.jpg') }}" src="{{ asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset('frontend/images/icons/cards/paypal.png') }}" width="30" class="lazyload">
-                                        </li>
+{{--                                        <li>--}}
+{{--                                            <img src="{{ asset('frontend/images/placeholder.jpg') }}" src="{{ asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset('frontend/images/icons/cards/visa.png') }}" width="30" class="lazyload">--}}
+{{--                                        </li>--}}
+{{--                                        <li>--}}
+{{--                                            <img src="{{ asset('frontend/images/placeholder.jpg') }}" src="{{ asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset('frontend/images/icons/cards/mastercard.png') }}" width="30" class="lazyload">--}}
+{{--                                        </li>--}}
+{{--                                        <li>--}}
+{{--                                            <img src="{{ asset('frontend/images/placeholder.jpg') }}" src="{{ asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset('frontend/images/icons/cards/maestro.png') }}" width="30" class="lazyload">--}}
+{{--                                        </li>--}}
+{{--                                        <li>--}}
+{{--                                            <img src="{{ asset('frontend/images/placeholder.jpg') }}" src="{{ asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset('frontend/images/icons/cards/paypal.png') }}" width="30" class="lazyload">--}}
+{{--                                        </li>--}}
                                         <li>
                                             <img src="{{ asset('frontend/images/placeholder.jpg') }}" src="{{ asset('frontend/images/placeholder.jpg') }}" data-src="{{ asset('frontend/images/icons/cards/cod.png') }}" width="30" class="lazyload">
                                         </li>
@@ -385,14 +385,14 @@
                                 </div>
                             </div> --}}
                             <hr class="mt-4">
-                            <div class="row no-gutters mt-4">
+                            {{--<div class="row no-gutters mt-4">
                                 <div class="col-2">
                                     <div class="product-description-label mt-2">{{__('Share')}}:</div>
                                 </div>
                                 <div class="col-10">
                                     <div id="share"></div>
                                 </div>
-                            </div>
+                            </div>--}}
                         </div>
                     </div>
                 </div>

@@ -22,7 +22,8 @@
                             <i class="la la-map-o"></i>
                         </div>
                         <div class="block-content d-none d-md-block">
-                            <h3 class="heading heading-sm strong-300 c-gray-light text-capitalize">2. {{__('Shipping info')}}</h3>
+                           {{-- <h3 class="heading heading-sm strong-300 c-gray-light text-capitalize">2. {{__('Shipping info')}}</h3>--}}
+                            <h3 class="heading heading-sm strong-300 c-gray-light text-capitalize">2. {{__('Location info')}}</h3>
                         </div>
                     </div>
                 </div>
@@ -147,9 +148,11 @@
                             </div>
                             <div class="col-md-6 text-right">
                                 @if(Auth::check())
-                                    <a href="{{ route('checkout.shipping_info') }}" class="btn btn-styled btn-base-1">{{__('Continue to Shipping')}}</a>
+                                   {{-- <a href="{{ route('checkout.shipping_info') }}" class="btn btn-styled btn-base-1">{{__('Continue to Shipping')}}</a>--}}
+                                    <a href="{{ route('checkout.shipping_info') }}" class="btn btn-styled btn-base-1">{{__('Continue to Get Location')}}</a>
                                 @else
-                                    <button class="btn btn-styled btn-base-1" onclick="showCheckoutModal()">{{__('Continue to Shipping')}}</button>
+                                    {{--<button class="btn btn-styled btn-base-1" onclick="showCheckoutModal()">{{__('Continue to Shipping')}}</button>--}}
+                                    <button class="btn btn-styled btn-base-1" onclick="showCheckoutModal()">{{__('Continue to Get Location')}}</button>
                                 @endif
                             </div>
                         </div>
@@ -251,6 +254,8 @@
                         <div class="or or--1 mt-2">
                             <span>{{__('or')}}</span>
                         </div>
+                        <span>{{__(' If not a registered user click Guest Checkout button')}}</span>
+
                         <div class="text-center">
                             <a href="{{ route('checkout.shipping_info') }}" class="btn btn-styled btn-base-1">{{__('Guest Checkout')}}</a>
                         </div>

@@ -23,7 +23,8 @@
                                 <i class="la la-map-o"></i>
                             </div>
                             <div class="block-content d-none d-md-block">
-                                <h3 class="heading heading-sm strong-300 c-gray-light text-capitalize">2. {{__('Shipping info')}}</h3>
+                                {{--<h3 class="heading heading-sm strong-300 c-gray-light text-capitalize">2. {{__('Shipping info')}}</h3>--}}
+                                <h3 class="heading heading-sm strong-300 c-gray-light text-capitalize">2. {{__('Location info')}}</h3>
                             </div>
                         </div>
                     </div>
