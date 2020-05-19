@@ -61,7 +61,7 @@
         <table class="table-cart table-cart-review my-4">
             <thead>
                 <tr>
-                    <th class="product-name">{{__('Product Shipping charge')}}</th>
+                    <th class="product-name">{{__('Product Delivery charge')}}</th>
                     <th class="product-total text-right">{{__('Amount')}}</th>
                 </tr>
             </thead>
@@ -98,7 +98,7 @@
                 </tr>
 
                 <tr class="cart-shipping">
-                    <th>{{__('Total Shipping')}}</th>
+                    <th>{{__('Total Delivery')}}</th>
                     <td class="text-right">
                         <span class="text-italic">{{ single_price($shipping) }}</span>
                     </td>
