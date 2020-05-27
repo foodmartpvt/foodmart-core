@@ -69,11 +69,11 @@
                                         @foreach ($category->subcategories as $key => $subcategory)
                                             @foreach ($subcategory->subsubcategories as $key => $subsubcategory)
                                                 @php
-                                                    foreach (json_decode($subsubcategory->brands) as $brand) {
+                                                    /*foreach (json_decode($subsubcategory->brands) as $brand) {
                                                         if(!in_array($brand, $brands)){
                                                             array_push($brands, $brand);
                                                         }
-                                                    }
+                                                    }*/
                                                 @endphp
                                             @endforeach
                                         @endforeach
