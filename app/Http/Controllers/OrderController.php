@@ -237,12 +237,15 @@ class OrderController extends Controller
                     $order_detail->shipping_cost = \App\Product::find($cartItem['id'])->shipping_cost*$cartItem['quantity'];
 
                     //added 200 Rs for more than 200Rs, done by pasindu 2020/05/30
-                    $subtotal += $cartItem['price']*$cartItem['quantity'];
-                    $tax += $cartItem['tax']*$cartItem['quantity'];
                     if($subtotal + $tax>=2000){
                         $shipping_cost=0;
                     }else{
-                        $shipping_cost=200;
+                        if($key==0){
+                            $shipping_cost=200;
+                        }else{
+                            $shipping_cost=0;
+                        }
+                        $shipping_cost=$shipping_cost;
                     }
                     $order_detail->shipping_cost =$shipping_cost;
 
