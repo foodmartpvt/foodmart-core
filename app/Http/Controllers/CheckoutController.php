@@ -284,7 +284,7 @@ class CheckoutController extends Controller
             $shipping += $cartItem['shipping']*$cartItem['quantity'];
         }
         //added 200 Rs for more than 200Rs, done by pasindu 2020/05/30
-        if($subtotal + $tax>2000){
+        if($subtotal + $tax>=2000){
             $shipping=0;
         }else{
             $shipping=200;

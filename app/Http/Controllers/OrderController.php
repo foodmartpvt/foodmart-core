@@ -204,7 +204,7 @@ class OrderController extends Controller
                     $tax += $cartItem['tax']*$cartItem['quantity'];
                     $shipping += \App\Product::find($cartItem['id'])->shipping_cost*$cartItem['quantity'];
                     //added 200 Rs for more than 200Rs, done by pasindu 2020/05/30
-                    if($subtotal + $tax>2000){
+                    if($subtotal + $tax>=2000){
                         $shipping=0;
                     }else{
                         $shipping=200;
@@ -239,7 +239,7 @@ class OrderController extends Controller
                     //added 200 Rs for more than 200Rs, done by pasindu 2020/05/30
                     $subtotal += $cartItem['price']*$cartItem['quantity'];
                     $tax += $cartItem['tax']*$cartItem['quantity'];
-                    if($subtotal + $tax>2000){
+                    if($subtotal + $tax>=2000){
                         $shipping_cost=0;
                     }else{
                         $shipping_cost=200;
