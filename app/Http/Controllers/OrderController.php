@@ -203,6 +203,13 @@ class OrderController extends Controller
                     $subtotal += $cartItem['price']*$cartItem['quantity'];
                     $tax += $cartItem['tax']*$cartItem['quantity'];
                     $shipping += \App\Product::find($cartItem['id'])->shipping_cost*$cartItem['quantity'];
+                    //added 200 Rs for more than 200Rs, done by pasindu 2020/05/30
+                    if($subtotal + $tax>2000){
+                        $shipping=0;
+                    }else{
+                        $shipping=200;
+                    }
+                    //End-added 200 Rs for more than 200Rs, done by pasindu 2020/05/30
                 }
 
                 $product_variation = $cartItem['variant'];
@@ -228,6 +235,19 @@ class OrderController extends Controller
 
                 if ($cartItem['shipping_type'] == 'home_delivery') {
                     $order_detail->shipping_cost = \App\Product::find($cartItem['id'])->shipping_cost*$cartItem['quantity'];
+
+                    //added 200 Rs for more than 200Rs, done by pasindu 2020/05/30
+                    $subtotal += $cartItem['price']*$cartItem['quantity'];
+                    $tax += $cartItem['tax']*$cartItem['quantity'];
+                    if($subtotal + $tax>2000){
+                        $shipping_cost=0;
+                    }else{
+                        $shipping_cost=200;
+                    }
+                    $order_detail->shipping_cost =$shipping_cost;
+
+                    //End-added 200 Rs for more than 200Rs, done by pasindu 2020/05/30
+                    //$order_detail->shipping_cost = \App\Product::find($cartItem['id'])->shipping_cost*$cartItem['quantity'];
                 }
                 else{
                     $order_detail->shipping_cost = 0;

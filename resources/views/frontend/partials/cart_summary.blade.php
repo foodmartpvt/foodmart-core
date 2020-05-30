@@ -33,6 +33,13 @@
                     $subtotal += $cartItem['price']*$cartItem['quantity'];
                     $tax += $cartItem['tax']*$cartItem['quantity'];
                     $shipping += $cartItem['shipping']*$cartItem['quantity'];
+                    //added 200 Rs for more than 200Rs, done by pasindu 2020/05/30
+                    if($subtotal + $tax>2000){
+                        $shipping=0;
+                    }else{
+                        $shipping=200;
+                    }
+                    //End-added 200 Rs for more than 200Rs, done by pasindu 2020/05/30
                     $product_name_with_choice = $product->name;
                     if ($cartItem['variant'] != null) {
                         $product_name_with_choice = $product->name.' - '.$cartItem['variant'];
