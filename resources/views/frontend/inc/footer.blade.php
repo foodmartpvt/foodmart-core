@@ -147,6 +147,8 @@
                             </li>
                         </ul>
                     </div>
+                    <a href='http://www.freevisitorcounters.com'>free visitor counters</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=422778ad81124b4cae4bf1ba24040152264717e4'></script>
+                    <script type="text/javascript" src="https://freevisitorcounters.com/en/home/counter/764566/t/0"></script>
                    {{-- @if (\App\BusinessSetting::where('type', 'vendor_system_activation')->first()->value == 1)
                         <div class="col text-center text-md-left">
                             <div class="mt-4">
